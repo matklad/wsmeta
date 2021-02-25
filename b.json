@@ -1,0 +1,213 @@
+{
+    "packages": [
+        {
+            "name": "a",
+            "version": "0.1.0",
+            "id": "a 0.1.0 (path+file:///home/matklad/tmp/a)",
+            "license": null,
+            "license_file": null,
+            "description": null,
+            "source": null,
+            "dependencies": [
+                {
+                    "name": "b",
+                    "source": null,
+                    "req": "*",
+                    "kind": null,
+                    "rename": null,
+                    "optional": false,
+                    "uses_default_features": true,
+                    "features": [],
+                    "target": null,
+                    "registry": null,
+                    "path": "/home/matklad/tmp/a/b"
+                }
+            ],
+            "targets": [
+                {
+                    "kind": [
+                        "bin"
+                    ],
+                    "crate_types": [
+                        "bin"
+                    ],
+                    "name": "a",
+                    "src_path": "/home/matklad/tmp/a/src/main.rs",
+                    "edition": "2018",
+                    "doc": true,
+                    "doctest": false,
+                    "test": true
+                }
+            ],
+            "features": {},
+            "manifest_path": "/home/matklad/tmp/a/Cargo.toml",
+            "metadata": null,
+            "publish": null,
+            "authors": [
+                "Aleksey Kladov <aleksey.kladov@gmail.com>"
+            ],
+            "categories": [],
+            "keywords": [],
+            "readme": null,
+            "repository": null,
+            "homepage": null,
+            "documentation": null,
+            "edition": "2018",
+            "links": null
+        },
+        {
+            "name": "b",
+            "version": "0.1.0",
+            "id": "b 0.1.0 (path+file:///home/matklad/tmp/a/b)",
+            "license": null,
+            "license_file": null,
+            "description": null,
+            "source": null,
+            "dependencies": [
+                {
+                    "name": "c",
+                    "source": null,
+                    "req": "*",
+                    "kind": null,
+                    "rename": null,
+                    "optional": false,
+                    "uses_default_features": true,
+                    "features": [],
+                    "target": null,
+                    "registry": null,
+                    "path": "/home/matklad/tmp/a/c"
+                }
+            ],
+            "targets": [
+                {
+                    "kind": [
+                        "lib"
+                    ],
+                    "crate_types": [
+                        "lib"
+                    ],
+                    "name": "b",
+                    "src_path": "/home/matklad/tmp/a/b/src/lib.rs",
+                    "edition": "2018",
+                    "doc": true,
+                    "doctest": true,
+                    "test": true
+                }
+            ],
+            "features": {},
+            "manifest_path": "/home/matklad/tmp/a/b/Cargo.toml",
+            "metadata": null,
+            "publish": null,
+            "authors": [
+                "Aleksey Kladov <aleksey.kladov@gmail.com>"
+            ],
+            "categories": [],
+            "keywords": [],
+            "readme": null,
+            "repository": null,
+            "homepage": null,
+            "documentation": null,
+            "edition": "2018",
+            "links": null
+        },
+        {
+            "name": "c",
+            "version": "0.1.0",
+            "id": "c 0.1.0 (path+file:///home/matklad/tmp/a/c)",
+            "license": null,
+            "license_file": null,
+            "description": null,
+            "source": null,
+            "dependencies": [],
+            "targets": [
+                {
+                    "kind": [
+                        "lib"
+                    ],
+                    "crate_types": [
+                        "lib"
+                    ],
+                    "name": "c",
+                    "src_path": "/home/matklad/tmp/a/c/src/lib.rs",
+                    "edition": "2018",
+                    "doc": true,
+                    "doctest": true,
+                    "test": true
+                }
+            ],
+            "features": {},
+            "manifest_path": "/home/matklad/tmp/a/c/Cargo.toml",
+            "metadata": null,
+            "publish": null,
+            "authors": [
+                "Aleksey Kladov <aleksey.kladov@gmail.com>"
+            ],
+            "categories": [],
+            "keywords": [],
+            "readme": null,
+            "repository": null,
+            "homepage": null,
+            "documentation": null,
+            "edition": "2018",
+            "links": null
+        }
+    ],
+    "workspace_members": [
+        "b 0.1.0 (path+file:///home/matklad/tmp/a/b)",
+        "c 0.1.0 (path+file:///home/matklad/tmp/a/c)",
+        "a 0.1.0 (path+file:///home/matklad/tmp/a)"
+    ],
+    "resolve": {
+        "nodes": [
+            {
+                "id": "a 0.1.0 (path+file:///home/matklad/tmp/a)",
+                "dependencies": [
+                    "b 0.1.0 (path+file:///home/matklad/tmp/a/b)"
+                ],
+                "deps": [
+                    {
+                        "name": "b",
+                        "pkg": "b 0.1.0 (path+file:///home/matklad/tmp/a/b)",
+                        "dep_kinds": [
+                            {
+                                "kind": null,
+                                "target": null
+                            }
+                        ]
+                    }
+                ],
+                "features": []
+            },
+            {
+                "id": "b 0.1.0 (path+file:///home/matklad/tmp/a/b)",
+                "dependencies": [
+                    "c 0.1.0 (path+file:///home/matklad/tmp/a/c)"
+                ],
+                "deps": [
+                    {
+                        "name": "c",
+                        "pkg": "c 0.1.0 (path+file:///home/matklad/tmp/a/c)",
+                        "dep_kinds": [
+                            {
+                                "kind": null,
+                                "target": null
+                            }
+                        ]
+                    }
+                ],
+                "features": []
+            },
+            {
+                "id": "c 0.1.0 (path+file:///home/matklad/tmp/a/c)",
+                "dependencies": [],
+                "deps": [],
+                "features": []
+            }
+        ],
+        "root": "b 0.1.0 (path+file:///home/matklad/tmp/a/b)"
+    },
+    "target_directory": "/home/matklad/tmp/a/target",
+    "version": 1,
+    "workspace_root": "/home/matklad/tmp/a",
+    "metadata": null
+}
